@@ -32,7 +32,12 @@ module.exports = {
       {
         // 제일 먼저 평가되어야 하는 로더가 제일 나중에 작성되야 한다.
         test: /\.s?css$/,
-        use: ['vue-style-loader', 'css-loader', 'sass-loader'],
+        use: [
+          'vue-style-loader',
+          'css-loader',
+          'postcss-loader',
+          'sass-loader'
+        ],
       },
     ],
   },
